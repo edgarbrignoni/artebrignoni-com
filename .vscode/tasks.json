@@ -1,0 +1,24 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Git Graph autostart",
+			"dependsOrder": "sequence",
+			// "dependsOn": [ "Git Graph open", "Git Graph pin tab", "Git Graph move tab to first" ],
+			"dependsOn": [ "Git Graph open", "Git Graph pin tab" ],
+			"runOptions": { "runOn": "folderOpen" },
+		},
+		{
+			"label": "Git Graph open",
+			"command": "${command:git-graph.view}",
+		},
+		{
+			"label": "Git Graph pin tab",
+			"command": "${command:workbench.action.pinEditor}",
+		},
+		// {
+		// 	"label": "Git Graph move tab to first",
+		// 	"command": "${command:movetab.moveTabToFirst}",
+		// }
+	],
+}
